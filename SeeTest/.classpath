@@ -7,5 +7,6 @@
 	<classpathentry kind="lib" path="C:/Mobility CoE/Softwares/ws-commons-util.jar.zip"/>
 	<classpathentry kind="lib" path="C:/Mobility CoE/Softwares/junit-4.12.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files (x86)/Experitest/SeeTest/clients/java/imageClient.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
