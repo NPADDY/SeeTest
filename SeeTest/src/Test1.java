@@ -4,7 +4,7 @@ import org.junit.*;
 /**
  *
 */
-public class SimpleLoginScript {
+public class Test1 {
     private String host = "localhost";
     private int port = 8889;
     private String projectBaseDirectory = "C:\\Users\\34275\\workspace\\project2";
@@ -24,7 +24,7 @@ public class SimpleLoginScript {
         client.verifyElementFound("TEXT", "SimpleLogin", 0);
         client.verifyElementFound("TEXT", "Email", 0);
         client.click("NATIVE", "xpath=//*[@id='email']", 0, 1);
-        client.sendText("foo@example1.com");
+        client.sendText("foo@example.com");
         client.click("NATIVE", "xpath=//*[@text='']", 0, 1);
         client.sendText("hi");
         client.verifyElementFound("TEXT", "SIGN IN OR REGISTER", 0);
