@@ -25,6 +25,7 @@ public class Test1 {
         client.verifyElementFound("TEXT", "Email", 0);
         client.click("NATIVE", "xpath=//*[@id='email']", 0, 1);
         client.sendText("foo@example.com");
+        client.sleep(3000);
         client.click("NATIVE", "xpath=//*[@id='password']", 0, 1);
         client.sendText("hi");
         client.verifyElementFound("TEXT", "SIGN IN OR REGISTER", 0);
