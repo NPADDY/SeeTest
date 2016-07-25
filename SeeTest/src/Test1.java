@@ -20,12 +20,14 @@ public class Test1 {
     @Test
     public void testSimpleLoginScript(){
         client.setDevice("adb:SAMSUNG-SGH-I317");
-        client.launch("com.example.a34275.simplelogin/.LoginActivity", true, false);
+        if(client.install("C:\\JenkinsLab\\workspace\\SimpleLogin\\app\\build\\outputs\\apk\\app-debug.apk", true, false)){
+            // If statement
+        }
+        client.launch("com.example.a34275.simplelogin/.LoginActivity", false, false);
         client.verifyElementFound("TEXT", "SimpleLogin", 0);
         client.verifyElementFound("TEXT", "Email", 0);
         client.click("NATIVE", "xpath=//*[@id='email']", 0, 1);
         client.sendText("foo@example.com");
-        client.sleep(3000);
         client.click("NATIVE", "xpath=//*[@id='password']", 0, 1);
         client.sendText("hi");
         client.verifyElementFound("TEXT", "SIGN IN OR REGISTER", 0);
