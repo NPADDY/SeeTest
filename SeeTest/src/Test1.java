@@ -14,14 +14,15 @@ public class Test1 {
     public void setUp(){
         client = new Client(host, port, true);
         client.setProjectBaseDirectory(projectBaseDirectory);
-        
-        
         client.setReporter("xml", "reports", "SimpleLoginScript");
     }
 
     @Test
     public void testSimpleLoginScript(){
         client.setDevice("adb:SAMSUNG-SGH-I317");
+        if(client.uninstall("com.example.a34275.simplelogin")){
+            // If statement
+        }
         if(client.install("C:\\JenkinsLab\\workspace\\SimpleLogin\\app\\build\\outputs\\apk\\app-debug.apk", true, false)){
             // If statement
         }
